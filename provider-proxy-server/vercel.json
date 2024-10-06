@@ -1,23 +1,9 @@
 {
   "version": 2,
-  "builds": [
-    {
-      "src": "src/server.ts",
-      "use": "@vercel/node"
+  "functions": {
+    "api/*.js": {
+      "maxDuration": 30
     }
-  ],
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "src/server.ts",
-      "headers": {
-        "x-vercel-serverless-handler": "true",
-        "x-vercel-ignore": "false"
-      },
-      "continue": true
-    }
-  ],
-  "env": {
-    "PORT": "3040"
-  }
+  },
+  "buildCommand": "npm install typescript && npm run build"
 }
