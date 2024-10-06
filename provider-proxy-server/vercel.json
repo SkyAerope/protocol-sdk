@@ -1,9 +1,9 @@
 {
   "version": 2,
-  "functions": {
-    "api/*.js": {
-      "maxDuration": 30
+  "builds": [
+    {
+      "src": "src/server.ts",
+      "use": "@vercel/node"
     }
-  },
-  "buildCommand": "npm install typescript && npm run build"
+  ]
 }
