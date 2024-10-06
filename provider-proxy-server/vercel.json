@@ -1,0 +1,23 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "src/server.ts",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "src/server.ts",
+      "headers": {
+        "x-vercel-serverless-handler": "true",
+        "x-vercel-ignore": "false"
+      },
+      "continue": true
+    }
+  ],
+  "env": {
+    "PORT": "3040"
+  }
+}
