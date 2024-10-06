@@ -5,5 +5,7 @@
       "src": "src/server.ts",
       "use": "@vercel/node"
     }
-  ]
+  ],
+  "buildCommand": "npm install typescript && npm run build",
+  "installCommand": "npm install"
 }

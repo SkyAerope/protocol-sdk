@@ -6,7 +6,7 @@
     "declaration": true,
     "declarationMap": true,
     "sourceMap": true,
-    "outDir": "./api",
+    "outDir": "./dist",
     "rootDir": "./src",
     "strict": true,
     "moduleResolution": "node",
